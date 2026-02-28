@@ -37,7 +37,7 @@ def monitor_containers():
                     failed_containers.add(name)
                     print(f"❗ Alert sent for: {name}")
             else:
-                # If the container comes back to life, remove it from the failed list
+                # If the container comes back to life, remove it from the failed list.
                 if name in failed_containers:
                     send_telegram_alert(f"✅ *RECOVERED*\nThe container *{name}* is back to life.")
                     failed_containers.remove(name)
